@@ -1,13 +1,6 @@
 {% do normalize().headMeta(entity).headTitle(entity) %}
 {% set title = entity.getCurrentRevision().get('title') %}
 <div itemscope itemtype="http://schema.org/Article">
-    <div class="page-header">
-        {% set controls = include('entity/view/partials/actions/controls') %}
-        {% do placeholder('controls').set(controls) %}
-        {% do placeholder('breadcrumbs').set('<li><span>' ~ title ~ '</span></li>') %}
-        <h1><span itemprop=”name”>{{ title }}</span></h1>
-        {% include 'entity/view/partials/actions/big' %}
-    </div>
     <div itemprop="articleBody">
         {% include 'entity/page/partials/alerts' %}
         {% include 'entity/view/default' %}
