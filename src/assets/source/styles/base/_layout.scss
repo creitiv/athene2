@@ -125,7 +125,6 @@
   // For Now
   min-height: 670px;
   padding: 0 $contentPadding $contentPadding;
-  margin-right: -($sidebarWidth + $sidebarGap);
 
   float: left;
   // box-sizing: content-box;
@@ -151,11 +150,10 @@
 /* Right Context Area */
 .side-context {
   position: absolute;
-
   top: $sideNavTopOffset;
   right: -($sidebarWidth + $sidebarGap);
   width: $sidebarWidth;
-  float: right;
+  z-index: $sideElementZIndex;
   // margin-left: $contentMaxWidth + 2 * $contentPadding;
   // margin-left: $sidebarGap;
 
@@ -197,9 +195,6 @@
       clear: none;
       display: none;
     }
-  }
-  &.visible{
-    position: relative;
   }
 }
 
